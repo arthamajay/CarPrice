@@ -39,3 +39,14 @@ print(f"📊 Model Performance (With Ridge Regression):")
 print(f"MAE (Mean Absolute Error): {mae}")
 print(f"MSE (Mean Squared Error): {mse}")
 print(f"R² Score: {r2}")
+import pickle
+
+# Save model
+with open("car_price_model.pkl", "wb") as f:
+    pickle.dump(model, f)
+
+# Save scaler
+with open("scaler.pkl", "wb") as f:
+    pickle.dump(scaler, f)
+
+#print("✅ Model and scaler have been saved!")
